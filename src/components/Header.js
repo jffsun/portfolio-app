@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 
-const Navbar = () => {
+const Header = () => {
   return (
     <nav>
       <ul>
@@ -12,7 +12,7 @@ const Navbar = () => {
           // spy on current scroll position and update link accordingly
           spy={true}
           smooth={true}
-          // vertical offset gap to avoid overlap with navbar and page
+          // vertical offset gap to avoid overlap with header and page
           offset={-70}
           // duration in ms of scroll animation
           duration={500}
@@ -61,4 +61,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
