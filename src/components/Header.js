@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-scroll";
 
-const Header = () => {
+// destructure handleNavClick function passed
+const Header = ({ handleNavClick }) => {
+
   return (
     <nav>
       <ul>

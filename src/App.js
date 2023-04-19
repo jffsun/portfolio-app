@@ -1,27 +1,33 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './App.css';
 import Header from './components/Header';
-import Home from './components/Home';
-import About from './components/About';
-import Work from './components/Work';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+import Home from './pages/Home';
+import About from './pages/About';
+import Work from './pages/Work';
+import Contact from './pages/Contact';
+
 function App() {
+  // const [pageTitle, setPageTitle] = useState('home');
+
+  // handles the state change of pageTitle
+  // function handleNavClick(pageTitle) {
+  //   setPageTitle(pageTitle);
+  // }
+
   return (
-   
-    <Router>
-       <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/work" component={Work} />
-          <Route path="/contact" component={Contact} />
-        </Switch>
+    <div className="portfolio-container">
+      <Header />
+       <div>
+        <Home/>
+        <About/>
+        <Work/>
+        <Contact/>
+       </div>
       <Footer />
-    </Router>
+    </div>
   );
 }
 
