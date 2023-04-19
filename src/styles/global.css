@@ -1,12 +1,12 @@
 /* reset.css */
-/* Box sizing reset */
+/* box sizing reset */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default margin and padding */
+/* remove default margin and padding */
 html,
 body,
 div,
@@ -118,4 +118,84 @@ a:hover {
   color: #0077cc;
 }
 
-/* add your own custom styles here */
+/* custom styles */
+
+/* header styling */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 7vh;
+  height: 5vh;
+  width: 100%;
+}
+
+/* styling of parent container with child links */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 30%;
+  padding: 1%;
+  margin-right: 5%;
+  background-color: #e9e9e9;
+}
+/* styling of links text */
+.nav-link {
+  /* 5px top bottom and 10px left right */
+  padding: 0 5%;
+  font-size: 1em;
+}
+
+.home {
+  background-color: #f8f8f8;
+  height: 80vh;
+  padding-bottom: 5%;
+}
+
+.about {
+  background-color: #e9e9e9;
+  height: 80vh;
+  padding: 50px;
+}
+
+.work {
+  background-color: #f0f0f0;
+  height: 80vh;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding: 50px;
+}
+
+.contact {
+  background-color: #f8f8f8;
+  height: 80vh;
+  padding: 50px;
+}
+
+/* Small devices (portrait phones) */
+@media screen and (max-width: 320px) {
+  /* styles go here */
+}
+
+/* Small devices (landscape phones) */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  /* styles go here */
+}
+
+/* Medium devices (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* styles go here */
+}
+
+/* Large devices (laptops/desktops) */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  /* styles go here */
+}
+
+/* Extra-large devices (large desktops) */
+@media screen and (min-width: 1200px) {
+  /* styles go here */
+  /* .navbar {
+    width: 100%
+  } */
+}

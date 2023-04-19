@@ -2,14 +2,15 @@ import React from "react";
 import { Link } from "react-scroll";
 
 // destructure handleNavClick function passed
-const Header = ({ handleNavClick }) => {
+const Header = () => {
 
   return (
-    <nav>
-      <ul>
-        <li>
+    <nav className="navbar">
+      <ul className="nav-links">
+        <li className="nav-link">
           <Link
           activeClass="active"
+          // looks for element id "home"
           to="home"
           // spy on current scroll position and update link accordingly
           spy={true}
@@ -22,7 +23,7 @@ const Header = ({ handleNavClick }) => {
           Home
         </Link>
         </li>
-      <li>
+      <li className="nav-link">
         <Link
           activeClass="active"
           to="about"
@@ -34,7 +35,7 @@ const Header = ({ handleNavClick }) => {
           About
         </Link>
       </li>
-        <li>
+        <li className="nav-link"> 
         <Link
           activeClass="active"
           to="work"
@@ -46,7 +47,7 @@ const Header = ({ handleNavClick }) => {
           Work
         </Link>
         </li>
-      <li>
+      <li className="nav-link">
         <Link
           activeClass="active"
           to="contact"
