@@ -10,12 +10,6 @@ import Work from './pages/Work';
 import Contact from './pages/Contact';
 
 function App() {
-  // const [pageTitle, setPageTitle] = useState('home');
-
-  // handles the state change of pageTitle
-  // function handleNavClick(pageTitle) {
-  //   setPageTitle(pageTitle);
-  // }
 
   return (
     <div className="portfolio-container">
