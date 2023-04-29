@@ -161,10 +161,16 @@ a:hover {
   font-size: 1em;
 }
 
-.home {
-  background-color: #f8f8f8;
+.home-container {
+  display: flex;
+  justify-content: center;
+  width: 60%;
   height: 80vh;
   padding-bottom: 5%;
+  background-color: #f8f8f8;
+}
+
+.home-contents {
 }
 
 .about {
