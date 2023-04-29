@@ -32,64 +32,66 @@ const Navbar = () => {
     // therefore useEffect hook only runs once which is after component's initial render
   }, []);
   return (
-    <nav className="navbar">
-      {/* on button click, toggle state of showLink */}
-      <button className="navbar-toggler navbar-collapse" onClick={handleToggleClick}>
-        {/* hamburger icon */}
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      {/* ternary: if showLinks state true then show, if false then null */}
-      <ul className={`nav-links ${showLinks ? 'show' : ''}`}>
-        <li className="nav-link">
-          <Link
-            activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Home
-          </Link>
-        </li>
-        <li className="nav-link">
-          <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            About
-          </Link>
-        </li>
-        <li className="nav-link"> 
-          <Link
-            activeClass="active"
-            to="work"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Work
-          </Link>
-        </li>
-        <li className="nav-link">
-          <Link
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Contact
-          </Link>
-        </li>
-      </ul>
-    </nav>
+    <header className="sticky-top">
+      <nav className="navbar">
+        {/* on button click, toggle state of showLink */}
+        <button className="navbar-toggler navbar-collapse" onClick={handleToggleClick}>
+          {/* hamburger icon */}
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        {/* ternary: if showLinks state true then show, if false then null */}
+        <ul className={`nav-links ${showLinks ? 'show' : ''}`}>
+          <li className="nav-link">
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="nav-link">
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              About
+            </Link>
+          </li>
+          <li className="nav-link"> 
+            <Link
+              activeClass="active"
+              to="work"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Work
+            </Link>
+          </li>
+          <li className="nav-link">
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
