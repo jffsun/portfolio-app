@@ -187,6 +187,18 @@ a:hover {
   padding: 50px;
 }
 
+/* footer styling */
+footer {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+}
+
+footer button {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+}
+
 /* Small devices (portrait phones) */
 @media screen and (max-width: 320px) {
 
