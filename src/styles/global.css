@@ -123,14 +123,11 @@ a:hover {
 /* header styling */
 .navbar {
   display: flex;
-  justify-content: flex-end;
-  margin: 7vh 0;
+  justify-content: flex-start;
+  margin-top: 5vh;
+  padding-left: 5vw;
   height: 5vh;
   width: 100%;
-}
-
-.navbar-toggler-icon {
-  
 }
 
 .navbar-collapse {
@@ -163,14 +160,22 @@ a:hover {
 
 .home-container {
   display: flex;
-  justify-content: center;
-  width: 60%;
-  height: 80vh;
-  padding-bottom: 5%;
+  padding-top: 10vh;
+  margin-left: 5vw;
+  width: 75vw;
+  height: 65vh;  
   background-color: #f8f8f8;
 }
 
 .home-contents {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.home-contents h1 {
+  font-size: 5rem;
 }
 
 .about {
@@ -225,18 +230,21 @@ footer button {
 
 /* Medium devices (tablets) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-
+  .home-contents h1 {
+    font-size: 3rem;
+  }
 }
 
 /* Large devices (laptops/desktops) */
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
-
+  .home-contents h1 {
+    font-size: 4rem;
+  }
 }
 
 /* Extra-large devices (large desktops) */
-@media screen and (min-width: 1200px) {
-
-  /* .navbar {
-    width: 100%
-  } */
+@media screen and (min-width: 1200px) and (max-width: 1980px) {
+  .home-contents h1 {
+    font-size: 4.5rem;
+  }
 }
