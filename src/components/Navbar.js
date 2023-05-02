@@ -46,9 +46,8 @@ const Navbar = () => {
               activeClass="active"
               to="home"
               spy={true}
-              smooth={true}
               offset={-70}
-              duration={500}
+              duration={300}
             >
               Home
             </Link>
