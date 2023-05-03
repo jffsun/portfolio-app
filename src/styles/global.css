@@ -153,7 +153,7 @@ a:hover {
 .nav-link {
   /* 5px top bottom and 10px left right */
   padding: 0 5%;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .home-container {
@@ -161,7 +161,7 @@ a:hover {
   padding-top: 10vh;
   margin-left: 5vw;
   width: 75vw;
-  height: 60vh;  
+  height: 50vh;  
   background-color: #f8f8f8;
 }
 
@@ -191,7 +191,7 @@ a:hover {
 
 .about-content {
   width: 65vw;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .work {
