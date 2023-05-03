@@ -17,7 +17,7 @@ const About = () => {
         </p>
         <h3>Front-end & Back-end Technologies</h3>
         <p>
-          Python, JavaScript, HTML, CSS, React, Redux SQL, MongoDB, Node.js, Express, Apollo Server & GraphQL.
+          Python, JavaScript, HTML, CSS, React, Redux, jQuery, SQL, MongoDB, Node.js, Express.js
           {/* Insert logos for each side by side */}
         </p>
         <h3>

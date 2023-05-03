@@ -158,7 +158,8 @@ a:hover {
 
 .home-container {
   display: flex;
-  padding-top: 10vh;
+  align-items:center;
+  /* padding-top: 10vh; */
   margin-left: 5vw;
   width: 75vw;
   height: 50vh;  
@@ -222,14 +223,16 @@ footer button {
   bottom: 2rem;
 }
 
-/* Small devices (portrait phones) */
-@media screen and (max-width: 320px) {
+/* Styles for smartphones in portrait orientation */
+@media (max-width: 767px) {
+  .home-container  {
+    height: 20vh; 
+  }
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
 
-}
-
-/* Small devices (landscape phones) */
-@media screen and (min-width: 321px) and (max-width: 480px) {
-  /* Styles for vertical/collapsed navbar */
+/* Styles for vertical/collapsed navbar */
   .navbar-collapse {
     display: flex;
     justify-content: flex-end;
@@ -240,22 +243,31 @@ footer button {
   }
 }
 
-/* Medium devices (tablets) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* Styles for smartphones in landscape orientation and tablets in portrait orientation */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .home-container  {
+    height: 25vh; 
+  }
   .home-content h1 {
     font-size: 3rem;
   }
 }
 
-/* Large devices (laptops/desktops) */
-@media screen and (min-width: 1024px) and (max-width: 1199px) {
+/* Styles for tablets in landscape orientation and smaller desktop screens */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .home-container  {
+    height: 35vh; 
+  }
   .home-content h1 {
     font-size: 4rem;
   }
 }
-
-/* Extra-large devices (large desktops) */
-@media screen and (min-width: 1200px) and (max-width: 1980px) {
+   
+/* Styles for larger desktop screens */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+  .home-container  {
+    height: 45vh; 
+  }
   .home-content h1 {
     font-size: 4.5rem;
   }
