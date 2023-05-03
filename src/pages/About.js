@@ -7,33 +7,31 @@ const About = () => {
         <h2>About Me</h2>
       </div>
       <div className="about-content">
+      <h3>Who am I?</h3>
         <p>
-          Full Stack Developer with a background in Finance and Human Resources 
-          which provides me with a unique combination of technical and business skills.
-        </p>
-        <p>
-          Recent graduate of University of California, Irvine's Coding Bootcamp, where I 
-          acquired key skills for front-end and back-end development and coded web 
-          applications both independently and collaboratively.
           {/* Certificate / graduation logo */}
+          Full Stack Developer and recent graduate of University of California, Irvine's Coding Bootcamp.
         </p>
-        <h3>Technologies</h3>
         <p>
-          JavaScript, HTML, CSS, React, SQL, MongoDB, Node.js, Apollo Server & GraphQL.
+          Diverse professional background of Finance and Human Resources provides me a unique combination of technical and business skills.
+        </p>
+        <h3>Front-end & Back-end Technologies</h3>
+        <p>
+          Python, JavaScript, HTML, CSS, React, Redux SQL, MongoDB, Node.js, Express, Apollo Server & GraphQL.
           {/* Insert logos for each side by side */}
         </p>
         <h3>
-          What am I up to now?
+          What am I doing right now?
         </h3>
-          <p>
-            Actively seeking new career opportunities and willing to relocate for the right opportunity.
-          </p>
-          <p>
-            Pursuing my AWS Cloud Practitioner certification
-          </p>
-        <h3>When I'm not coding</h3>
         <p>
-          You can find me in the gym, listening to neuroscience podcasts, or on the trails training for my first marathon!
+          Pursuing AWS Cloud Practitioner certification
+        </p>
+        <p>
+          Actively seeking new career opportunities (Open to relocate for the right opportunity)
+        </p>
+        <h3>What do I do when I'm not coding?</h3>
+        <p>
+          Lift weights in the gym, take my dog Raven on walks, listen to neuroscience podcasts, and run on trails as I train for my first marathon!
           {/* Animation of brain training / working out */}
         </p>
       </div>
