@@ -3,8 +3,19 @@ import React from 'react';
 const Work = () => {
   return (
     <div className="work-container" id="work">
+    <div className="work-header">
       <h2>My Work</h2>
-      <p>[List your previous work experiences or projects, with brief descriptions and links to their respective websites (if applicable)].</p>
+    </div>
+    <div className="projects-container">
+      <div className="project">
+      </div>
+      <div className="project">
+      </div>
+      <div className="project">
+      </div>
+      <div className="project">
+      </div>
+    </div>
     </div>
   );
 };
