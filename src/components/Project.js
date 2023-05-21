@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Project = ({ imageSrc, title, technologies, description }) => {
+const Project = ({ image, title, technologies }) => {
   
   // state variables for project being hovered
   const [isHovered, setIsHovered] = useState(false);
@@ -22,15 +22,15 @@ const Project = ({ imageSrc, title, technologies, description }) => {
       // triggers handleMouseLeave() when mouse leaves 
       onMouseLeave={handleMouseLeave}
     >
-      <img className="project-image" src={imageSrc} alt={title} />
+      <img className="project-image" src={image} alt={title}/>
       {/* conditionally renders overlay if isHovered state is truthy */}
       {isHovered && (
         <div className="project-overlay">
           <h3 className="project-title">{title}</h3>
-          <p className="project-technologies">{technologies}</p>
+          <h4 className="project-technologies">{technologies}</h4>
           <button className="learn-more-button">Learn More</button>
         </div>
-      )};
+      )}
     </div>
   );
 };
