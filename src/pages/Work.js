@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Project from '../components/Project'
+import Modal from '../components/Modal'
 
+// arrays holds project details
 const projects = [
   {
     id: 1,
@@ -8,7 +10,7 @@ const projects = [
     description: 'Description for Project 1',
     technologies: 'SQL / JavaScript / Bootstrap',
     image: 'teachers-pet.png',
-    screenshot: '' ,
+    screenshot: 'teachers-pet.png' ,
     github: 'https://github.com/jffsun/teachers-pet',
   },
   {
@@ -17,7 +19,7 @@ const projects = [
     description: 'Description for Project 2',
     technologies: 'MongoDB / React.js / JavaScript',
     image: 'doggy-daycare.png',
-    screenshot: '' ,
+    screenshot: 'teachers-pet.png' ,
     github: 'https://github.com/jffsun/doggy-daycare',
   },
   {
@@ -26,17 +28,16 @@ const projects = [
     description: 'Description for Project 3',
     technologies: 'SQL / React.js / JavaScript',
     image: 'train-track.png',
-    screenshot: '' ,
+    screenshot: 'teachers-pet.png' ,
     github: 'https://github.com/jffsun/train-track',
   },
 ];
 
-
 const Work = () => {
-  // keeps track of selected project
+  // state keeps track of selected project
   const [selectedProject, setSelectedProject] = useState(null);
 
-  // keeps track of whether modal is open or closed
+  // state keeps track of whether modal is open or closed
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -47,38 +48,41 @@ const Work = () => {
     setIsModalOpen(false);
   }
 
-  // updates selectedProject and opens Modal
+  // callback function that updates selectedProject state with selected project's details and opens modal
   const handleLearnMore = (project) => {
-    // update selectedProject state in parent Work.js component 
-    setSelectedProject({ image, title, technologies, description })
 
-    // update isModalOpen state to true to open modal
-    setIsModalOpen(true);
+    // destructuring assignment on project object to extract properties
+    const { screenshot, title, technologies, description } = project;
+
+    // update the selectedProject state with these properties
+    setSelectedProject({ screenshot, title, technologies, description });
+
+    openModal();
   };
 
   return (
     <div className="work-container" id="work">
       <h2 className="work-header">Work</h2>
       <div className="all-projects-container">
-        {/* iterate through each project in projects array */}
         {projects.map((project) => (
-          // pass project's details into Project.js component
+
+          // for each project render a project component with their details
           <Project
             key={project.id}
             title={project.title}
-            description={project.description}
             technologies={project.technologies}
             image={require(`../images/${project.image}`)}
-            handleLearnMore={()=> handleLearnMore(project)}
-          />
+
+            // pass handleLearnMore as prop to project project component can update selectedProject state
+            handleLearnMore={() => handleLearnMore(project)}
+            />
         ))}
-        {/* if isModalOpen truthy then render modal */}
+        {/* if modal state open then render */}
         {isModalOpen && (
           <Modal
-            // passes entire selectedProject state variable to Modal.js
+            // pass selected project state var as prop to modal child component
             project={selectedProject}
-
-            // pass closeModal function so it can update isModal state in parent
+            // pass closeModal func so modal child component can close itself
             closeModal={closeModal}
           />
         )}

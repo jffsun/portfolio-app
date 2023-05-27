@@ -1,15 +1,18 @@
 const Modal = ({ project, closeModal }) => {
+  const { screenshot, title, technologies, description } = project;
+
   return (
     <div className="modal">
-      <h3>{project.title}</h3>
-      {/* TO DO: Different image from  */}
+      <h3>{title}</h3>
+      {/* TO DO: Screenshot image from */}
       <img className="project-screenshot" 
-      src="image={require(`../images/${project.image}`)}" 
-      alt={`${project.title} screenshot`}/>
-      <p>{project.technologies}</p>
-      <p>{project.description}</p>
-    
+      src={screenshot} 
+      alt={`${title} screenshot`}/>
+      <p>{technologies}</p>
+      <p>{description}</p>
       <button onClick={closeModal}>Close</button>
     </div>
   )
 }
+
+export default Modal;
