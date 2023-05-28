@@ -1,15 +1,16 @@
+import React from 'react';
+
 const Modal = ({ project, closeModal }) => {
-  const { screenshot, title, technologies, description } = project;
 
   return (
     <div className="modal">
-      <h3>{title}</h3>
-      {/* TO DO: Screenshot image from */}
+      <h3>{project.title}</h3>
+      {/* TO DO: Screenshot image */}
       <img className="project-screenshot" 
-      src={screenshot} 
-      alt={`${title} screenshot`}/>
-      <p>{technologies}</p>
-      <p>{description}</p>
+      src={project.screenshot} 
+      alt={`${project.title} screenshot`}/>
+      <p>{project.technologies}</p>
+      <p>{project.description}</p>
       <button onClick={closeModal}>Close</button>
     </div>
   )

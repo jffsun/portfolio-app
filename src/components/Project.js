@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Modal from './Modal'
 
-const Project = ({ title, technologies, image, handleLearnMore }) => {
+const Project = ({ project }) => {
   
   // state keeps track of project being hovered
   const [isHovered, setIsHovered] = useState(false);
@@ -15,22 +16,59 @@ const Project = ({ title, technologies, image, handleLearnMore }) => {
     setIsHovered(false);
   };
 
-  return (
-    <div className="project-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+  // state keeps track of selected project
+  const [selectedProject, setSelectedProject] = useState(null);
 
-      {/* image and title were passed as prop from parent component */}
-      <img className="project-image" src={image} alt={title}/>
+  // state keeps track of whether modal is open or closed
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // const openModal = () => {
+  // }
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  }
+
+  // callback function that updates selectedProject state with selected project's details and opens modal
+  const handleLearnMore = (project) => {
+
+    // update selectedProject with shallow copy of current project's details 
+    setSelectedProject(Object.assign({}, project));
+    setIsModalOpen(true);
+  };
+
+  useEffect(() => {
+    console.log('isModalOpen:', isModalOpen);
+  }, [isModalOpen]);
+
+  return (
+    
+    <div className="project-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <img 
+        className="project-image" 
+        src={require(`../images/${project.image}`)} 
+        alt={project.title}
+      />
 
       {/* conditionally render overlay depending on isHovered state */}
       {isHovered && (
         <div className="project-overlay">
-          <h3 className="project-title">{title}</h3>
-          <h4 className="project-technologies">{technologies}</h4>
+          <h3 className="project-title">{project.title}</h3>
+          <h4 className="project-technologies">{project.technologies}</h4>
 
-          {/* updates selectedProject state and isModalOpen in parent component */}
+          {/* updates selectedProject isModalOpen state */}
           <button className="learn-more-button" onClick={handleLearnMore}>Learn More</button>
         </div>
       )}
+
+      {isModalOpen && (
+        <Modal
+          // pass selected project state var as prop to modal child component
+          project={project}
+          closeModal={closeModal}
+        />
+      )}
+    
     </div>
   );
 };
