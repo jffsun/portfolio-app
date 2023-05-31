@@ -154,7 +154,6 @@ a:hover {
 
 /* styling of links text */
 .nav-link {
-  /* 5px top bottom and 10px left right */
   padding: 0 5%;
   font-size: 1.5rem;
   text-align:center
@@ -167,7 +166,6 @@ a:hover {
 .home-container {
   display: flex;
   align-items:center;
-  /* padding-top: 10vh; */
   margin: 3vh 5vw;
   width: 75vw;
   height: 50vh;  
@@ -189,22 +187,24 @@ a:hover {
   display: flex;
   flex-direction: column;
   height: 90vh;
-  background-color: #e9e9e9;
   margin: 5vw;
   width: 80vw;
-  padding: 40px;
 }
 
 .about-header h2 {
-  margin-bottom: 2%;
+  padding-left: 2.5%;
+  margin-bottom: 1%;
   align-self: flex-start;
   font-size: 2.5rem;
 }
 
 .about-content {
-  width: 65vw;
+  box-sizing: border-box;
+  background-color: #e9e9e9;
+  width: 80vw;
+  padding: 5%;
   justify-self: center;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .about-blurb {
@@ -212,36 +212,41 @@ a:hover {
 }
 
 .work-container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 80vh;
-  background-color: #e9e9e9;
+  height: 175vh;
   margin: 5vw;
-  width: 90vw;
-  padding: 40px;
+  width: 80vw;
 }
 
-.work-header {
-  margin-bottom: 10vh;
-  font-size: 3rem;
+.work-header h2 {
+  padding-left: 2.5%;
+  margin-bottom: 1%;
+  align-self: flex-start;
+  font-size: 2.5rem;
 }
 
 .all-projects-container {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-self: center;
-  justify-content:space-between;
+  justify-content: space-between;
+  text-align: center;
 }
 
 /* overlay must be absolutely positioned over this relative element */
 .project-container {
+  background-color: #e9e9e9;
   position: relative; 
   display: inline-block;
-  padding: 0 1%;
+  margin: 1% 0;
+  border-radius: 2%
 }
 
 .project-image {
-  width: 500px; /* Adjust the image width as needed */
+  max-width: 50%;
   height: auto;
 }
 
@@ -259,6 +264,7 @@ a:hover {
   align-items: center; /* Center contents horizontally */
   opacity: 0; /* Initially fully transparent */
   transition: opacity 0.5s ease; /* Overlay smoothly covers image */
+  border-radius: 2%
 }
 
 /* when project-container is hovered, turn project-overlay fully opaque */
@@ -286,6 +292,13 @@ a:hover {
 }
 
 /* MODAL STYLINGS */
+.all-modals-container {
+  width: 100%;
+  height: 100px;
+  align-self: center;
+  justify-content:space-between;
+}
+
 .modal {
   position: fixed;
   top: 50%;
@@ -358,7 +371,7 @@ footer button {
     align-self: center;
   }
   .about-content {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   /* Styles for vertical/collapsed navbar */
   .navbar {
@@ -411,7 +424,7 @@ footer button {
     align-self: center;
   }
   .about-content {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .nav-link {
     font-size: 1.15rem;
@@ -427,6 +440,9 @@ footer button {
     font-size: 4rem;
   }
   .nav-link {
+    font-size: 1.25rem;
+  }
+  .about-content {
     font-size: 1.25rem;
   }
 }
