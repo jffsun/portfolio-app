@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Project = ({ project, handleLearnMore }) => {
+const Project = ({ project, openDialog }) => {
   
   // state keeps track of project being hovered
   const [isHovered, setIsHovered] = useState(false);
@@ -31,7 +31,7 @@ const Project = ({ project, handleLearnMore }) => {
           <h4 className="project-technologies">{project.technologies}</h4>
 
           {/* updates selectedProject isModalOpen state */}
-          <button className="learn-more-button" onClick={handleLearnMore}>Learn More</button>
+          <button className="learn-more-button" onClick={() => openDialog(project.id)}>Learn More</button>
         </div>
       )}
     </div>

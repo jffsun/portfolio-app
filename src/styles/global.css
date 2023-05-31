@@ -215,7 +215,7 @@ a:hover {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 175vh;
+  height: 180vh;
   margin: 5vw;
   width: 80vw;
 }
@@ -289,54 +289,6 @@ a:hover {
   border: 2px solid #000; /* Add a solid black border with a thickness of 2px */
   border-radius: 5px; /* Add a border radius for rounded corners */
   cursor: pointer;
-}
-
-/* MODAL STYLINGS */
-.all-modals-container {
-  width: 100%;
-  height: 100px;
-  align-self: center;
-  justify-content:space-between;
-}
-
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.modal h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.modal .project-screenshot {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.modal p {
-  margin-bottom: 10px;
-}
-
-.modal button {
-  background-color: #f0f0f0;
-  color: #333;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.modal button:hover {
-  background-color: #ccc;
 }
 
 .contact {
@@ -419,9 +371,6 @@ footer button {
   }
   .home-content h1 {
     font-size: 3rem;
-  }
-  .about-header {
-    align-self: center;
   }
   .about-content {
     font-size: 1.25rem;

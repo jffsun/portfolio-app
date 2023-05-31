@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Project from '../components/Project'
-import Modal from '../components/Modal'
+import Dialog from '../components/Dialog'
 
 // arrays holds project details
 const projects = [
@@ -38,28 +38,13 @@ const Work = () => {
   // state keeps track of selected project
   const [selectedProject, setSelectedProject] = useState(null);
 
-  // state keeps track of whether modal is open or closed
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // const openModal = () => {
-  // }
-
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const openDialog = (projectId) => {
+    setSelectedProject(projectId);
   }
 
-  // callback function that updates selectedProject state with selected project's details and opens modal
-  const handleLearnMore = (project) => {
-
-    // update selectedProject with shallow copy of current project's details 
-    // setSelectedProject(Object.assign({}, project));
-    setIsModalOpen(true);
-  };
-
-  useEffect(() => {
-    console.log('isModalOpen:', isModalOpen);
-  }, [isModalOpen]);
-
+  const closeDialog = () => {
+    setSelectedProject(null);
+  }
 
   return (
     <div className="work-container" id="work">
@@ -74,26 +59,20 @@ const Work = () => {
 
             // image={require(`../images/${project.image}`)}
             project={project}
-            handleLearnMore={handleLearnMore}
+            openDialog={openDialog}
             />
         ))}
+        {selectedProject && (
+        <Dialog
+          // if selectedProject truthy with an id, find project's properties array based on id
+          id={projects.find((project) => project.id === selectedProject).id}
+          title={projects.find((project) => project.id === selectedProject).title}
+          screenshot={projects.find((project) => project.id === selectedProject).screenshot}
+          description={projects.find((project) => project.id === selectedProject).description}
+          onClose={closeDialog}
+        />
+      )}
       </div>
-      <div className="all-modals-container">
-        {projects.map((project) => (
-          // render each modal component with project details
-          <Modal
-            project={project}
-            closeModal={closeModal}>
-          </Modal>
-        ))} 
-      {/* {isModalOpen && (
-          <Modal
-            // pass selected project state var as prop to modal child component
-            project={project}
-            closeModal={closeModal}
-          />
-        )} */}
-      </div> 
     </div>
   );
 };
