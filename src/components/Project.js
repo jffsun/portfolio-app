@@ -17,7 +17,11 @@ const Project = ({ project, openDialog }) => {
 
   return (
     
-    <div className="project-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div 
+      className="project-container" 
+      id={`project-${project.id}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}>
       <img 
         className="project-image" 
         src={require(`../images/${project.image}`)} 

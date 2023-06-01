@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-// useEffect hook runs side effects inside a functional component 
-
 import { Link } from "react-scroll";
+import '../styles/Navbar.css';
 
 const Navbar = () => {
 

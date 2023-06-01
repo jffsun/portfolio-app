@@ -1,0 +1,93 @@
+/* navbar styling */
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5vh;
+  padding-left: 5vw;
+  height: 5vh;
+  width: 100%;
+}
+
+/*  hide dropdown button until screen width < 768px  */
+.navbar-collapse {
+  display: none;
+}
+
+/* styling of parent container with child links */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 30%;
+  padding: 1%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  background-color: #e9e9e9;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+/* styling of links text */
+.nav-link {
+  padding: 0 5%;
+  font-size: 1.5rem;
+  text-align:center
+}
+
+.nav-link:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* styles for vertical/collapsed navbar */
+    .navbar {
+      width: 20%;
+    }
+  
+    .navbar button {
+      width: 100%;
+      justify-content: center;
+    }
+  
+     /* show the links when navbar-toggler btn clicked and showLinks state is true */
+    .nav-links.show {
+      display: block;
+      border-radius: 10px;
+      opacity: 0.8;
+    }
+  
+    .navbar-collapse {
+      display: flex;
+      font-size: 1rem;
+    }
+  
+    /* container holding each navlink */
+    .nav-links {
+      position: absolute; /* appears near closest ancestor element which is the navbar */
+      top: 100%; /* below nearest ancestor element */
+      width: 400%;
+      max-width: none; /* reset max-width */
+      display: none; /* hide the links by default */
+      /* add any other styles you need */
+    }
+    .nav-link {
+      width: 100%;
+      padding: 10px;
+      text-align: left;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .nav-link {
+    font-size: 1.15rem;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .nav-link {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+
+}

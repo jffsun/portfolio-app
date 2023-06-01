@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/About.css';
 
 const About = () => {
   return (
@@ -24,7 +25,7 @@ const About = () => {
       </div>
       <div className="about-blurb">
         <h3>Outside of coding</h3>
-        <p>I enjoy bodybuilding, neuroscience podcasts, and am training for my first marathon{/* Animation of brain running */}
+        <p>I enjoy bodybuilding, neuroscience podcasts, and am training for my first marathon!{/* Animation of brain running */}
         </p>
       </div>
       </div>
