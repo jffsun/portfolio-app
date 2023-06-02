@@ -10,23 +10,23 @@ const About = () => {
       </div>
       <div className="about-content">
       <div className="about-blurb">
-        <h3>About me</h3>
-        <p>{/* Certificate / graduation logo */} Full Stack Developer and recent graduate of University of California, Irvine's Coding Bootcamp.</p>
-        <p> Diverse professional background of Finance and Human Resources provides me a unique combination of technical and business skills.</p>
+        <h3>About Me</h3>
+        <p>{/* Certificate / graduation logo */} I am a Full Stack Developer and recent graduate of University of California, Irvine's Coding Bootcamp.</p>
+        <p>Coming from the world of Finance and Human Resources provides me a unique combination of technical and business skills.</p>
+        <p>I have self-starter mentality with a strong passion for continuous learning.</p>
       </div>
       <div className="about-blurb">
         <h3>Technologies</h3>
-        <p>Python, JavaScript, HTML, CSS, React, Redux, jQuery, SQL, MongoDB, Node.js, Express.js{/* Logos for each side by side with hover squiggle */}</p>
+        <p>Python, JavaScript, React, Redux, Express.js, Node.js, SQL, MongoDB{/* Logos for each side by side with hover squiggle */}</p>
       </div>
       <div className="about-blurb">
-        <h3>Right now</h3>
+        <h3>Right Now</h3>
         <p>Pursuing AWS Cloud Practitioner certification{/* AWS Logo */}</p>
         <p>Actively seeking new career opportunities (Open to relocate for the right opportunity)</p>
       </div>
       <div className="about-blurb">
-        <h3>Outside of coding</h3>
-        <p>I enjoy bodybuilding, neuroscience podcasts, and am training for my first marathon!{/* Animation of brain running */}
-        </p>
+        <h3>Outside of Coding</h3>
+        <p>I love bodybuilding, science podcasts, and trying new restaurants. I am also currently training for my first marathon!{/* Animation of brain running */}</p>
       </div>
       </div>
     </div>
