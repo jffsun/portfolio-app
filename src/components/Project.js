@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/Project.css'
 
 const Project = ({ project, openDialog }) => {
   
@@ -31,8 +32,8 @@ const Project = ({ project, openDialog }) => {
       {/* conditionally render overlay depending on isHovered state */}
       {isHovered && (
         <div className="project-overlay">
-          <h3 className="project-title">{project.title}</h3>
-          <h4 className="project-technologies">{project.technologies}</h4>
+          <h2 className="project-title">{project.title}</h2>
+          <h3 className="project-technologies">{project.technologies}</h3>
 
           {/* updates selectedProject isModalOpen state */}
           <button className="learn-more-button" onClick={() => openDialog(project.id)}>Learn More</button>

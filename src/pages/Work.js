@@ -8,8 +8,8 @@ const projects = [
   {
     id: 1,
     title: 'Teacher\'s Pet',
-    description: 'Description for Project 1',
-    technologies: 'SQL / JavaScript / Bootstrap',
+    description: 'Parent-teacher portal allows parents to upload student information for teachers. Teachers can post important school announcements and updates for parents.',
+    technologies: 'Express.js / Node.js / MySQL / JavaScript',
     image: 'teachers-pet.png',
     screenshot: 'teachers-pet-screenshot.png' ,
     github: 'https://github.com/jffsun/teachers-pet',
@@ -18,8 +18,8 @@ const projects = [
   {
     id: 2,
     title: 'Doggy Daycare',
-    description: 'Description for Project 2',
-    technologies: 'MongoDB / React.js / JavaScript',
+    description: 'Web application allows users to book pet services and interfaces with a calendar API to render customers\' booked services.',
+    technologies: 'React / Apollo Server Express / GraphQL / MongoDB / JavaScript',
     image: 'doggy-daycare.png',
     screenshot: 'doggy-daycare-screenshot.png' ,
     github: 'https://github.com/jffsun/doggy-daycare',
@@ -28,10 +28,10 @@ const projects = [
   {
     id: 3,
     title: 'Train Track (In Progress)',
-    description: 'Description for Project 3',
-    technologies: 'SQL / React.js / JavaScript',
+    description: 'Gym book web application allows users to build workouts with various exercises. Users can then log exercise data such as weight, number of sets, and number of reps to track their training progress.',
+    technologies: 'React / MySQL / JavaScript',
     image: 'train-track.png',
-    screenshot: 'teachers-pet.png' ,
+    screenshot: 'train-track.png' ,
     github: 'https://github.com/jffsun/train-track',
     url: 'https://www.placeholder.com'
   },
