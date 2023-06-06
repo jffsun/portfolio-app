@@ -2,18 +2,16 @@
 .contact-container {
   display: flex;
   flex-direction: column;
-  height: 75vh;
   margin: 5vw;
   width: 80vw;
 }
 
-.contact-header {
+.contact-header h2 {
   padding-left: 2.5%;
   margin-bottom: 1%;
   align-self: flex-start;
   font-size: 2.5rem;
 }
-
 
 .contact-content {
   box-sizing: border-box;
@@ -24,7 +22,9 @@
   font-size: 1.5rem;
 }
 
-.contact-header h3 {
+#contact-question {
+  margin: 2%;
+  font-size: 1em;
   text-decoration: none;
 }
 
@@ -32,9 +32,25 @@
   display: flex;
   flex-direction: column; 
   width: 50%;
+  margin-bottom: 3%;
   align-self: center;
   font-size: .75em;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+input,
+textarea {
+  display: block;
+  margin: 1%;
+}
+
+textarea {
+  margin-bottom: 3%;
+}
+
+.contact-form button {
+  width: 30%;
+  align-self: center;
 }
 
 .contact-form-container {
@@ -44,25 +60,35 @@
   justify-content: center;
 }
 
-input,textarea {
-  display: block;
-  margin: 1%;
+#my-email {
+  font-size: .75em;
 }
 
-button {
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
   width: 20%;
-  align-self: center;
 }
 
-@media (max-width: 768px) {
+.social-buttons button {
+  font-size: 2.5rem;
+  width: 60%;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
 
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
 
 }
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
 
 }
+
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
 
 }

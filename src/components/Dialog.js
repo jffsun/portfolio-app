@@ -12,7 +12,7 @@ const Dialog = ({ id, screenshot, title, description, github, url, isOpen, onClo
       <div className="dialog-content" id={id}>
         <div className="close-button-container">
           <button 
-            id="close-button" 
+            id="close-project-button" 
             onClick={onClose}>
             <FontAwesomeIcon icon={faX}/>
           </button>
@@ -30,7 +30,7 @@ const Dialog = ({ id, screenshot, title, description, github, url, isOpen, onClo
         </div>
         <div className="dialog-buttons-container">
           <div className="dialog-buttons-links">
-            <button id="site-button">
+            <button id="project-site-button">
               <a 
                 href={url}
                 rel="noreferrer"
@@ -38,7 +38,7 @@ const Dialog = ({ id, screenshot, title, description, github, url, isOpen, onClo
                 View Site
               </a>
             </button>
-            <button id="github-button">
+            <button id="project-github-button">
               <a 
                 href={github}
                 rel="noreferrer"

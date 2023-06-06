@@ -1,10 +1,9 @@
 /* home section styling */
 .home-container {
+  width: 100vw;
+  margin: 4% 5% 3% 5%;
   display: flex;
   align-items:center;
-  margin: 3vh 5vw;
-  width: 100vw;
-  height: 50vh;  
   background-color: #f8f8f8;
 }
 
@@ -15,35 +14,29 @@
 }
 
 .home-content h1 {
-  font-size: 4.75rem;
+  font-size: 4.5rem;
 }
-@media (max-width: 768px) {
-  .home-container  {
-    height: 20vh; 
-    width: 10vw;
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .home-container {
+    margin: 0 5% 3% 5%;
   }
   .home-content h1 {
     font-size: 2.5rem;
+    margin-top: 3vh;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .home-container  {
-    height: 25vh; 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .home-container {
+    margin: 2vh 5vw 3vh 5vw
   }
   .home-content h1 {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .home-container  {
-  height: 35vh; 
-  }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .home-content h1 {
-  font-size: 4rem;
+  font-size: 3.75rem;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
-  .home-container  {
-  height: 45vh; 
-  }
 }

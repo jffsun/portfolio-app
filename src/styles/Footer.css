@@ -5,7 +5,13 @@ footer {
 }
 
 footer button {
+  width: 7%;
   position: fixed;
   right: 2rem;
   bottom: 2rem;
+}
+
+#footer-button {
+  background: none;
+  border: none;
 }

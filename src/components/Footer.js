@@ -44,8 +44,8 @@ const Footer = () => {
               <div className="col text-center">
                 {/* if showButton true, show scroll-to-top button */}
                 {showButton && (
-                  <button
-                    className="btn btn-light btn-lg rounded-circle shadow"
+                  <button 
+                    id="footer-button"
                     onClick={handleButtonClick}
                   >
                     <FontAwesomeIcon icon={faArrowCircleUp} size="2x" />

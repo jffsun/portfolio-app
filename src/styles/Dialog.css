@@ -56,11 +56,11 @@
   justify-content: space-between;
 }
 
-#site-button {
+#project-site-button {
   background-color: #ccc;
 }
 
-#github-button {
+#project-github-button {
   border: none;
   opacity: 0.5;
   margin-left: 1%;
@@ -76,7 +76,7 @@
   opacity: 0.7;
 }
 
-#close-button {
+#close-project-button {
   width: 100%;
   padding: 0;
   border: none;
