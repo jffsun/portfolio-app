@@ -31,7 +31,7 @@ const Navbar = () => {
     // therefore useEffect hook only runs once which is after component's initial render
   }, []);
   return (
-    <header className="sticky-top">
+    <header>
       <div className="navbar-container">
         <nav className="navbar">
           {/* on button click, toggle state of showLink */}

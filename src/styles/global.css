@@ -117,3 +117,29 @@ a {
 a:hover {
   color: #0077cc;
 }
+
+.portfolio-container {
+  height: auto;
+}
+
+/* page background */
+.portfolio-container,.home-container {
+  background-color: #3b6064;
+}
+
+/* page text */
+body {
+  color: #c9e4ca;
+}
+
+/* about and contact section backgrounds */
+.about-content, .contact-content, .project-container {
+  background-color: #55828b;
+  /* color: #87bba2; */
+}
+
+/* work section background */
+.project-container {
+  /* background-color: #c9e4ca; */
+  /* background-color: #87bba2; */
+}

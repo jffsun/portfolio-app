@@ -20,6 +20,11 @@
   padding: 3%;
   justify-self: center;
   font-size: 1.5rem;
+  border-radius: 10px;  
+}
+
+.contact-blurb {
+  text-align: center;
 }
 
 #contact-question {
@@ -41,6 +46,7 @@
 input,
 textarea {
   display: block;
+  padding-left: 1%;
   margin: 1%;
 }
 
@@ -78,17 +84,25 @@ textarea {
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
-
+  .contact-header h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .contact-blurb p {
+    font-size: 1.25rem
+  }
+  #contact-question {
+    text-align: center;
+  }
+  .contact-form button {
+    width: 40%;
+    align-self: center;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
-}
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1919px) {
-
+  .contact-header h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
 }

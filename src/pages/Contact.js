@@ -19,15 +19,14 @@ const Contact = () => {
     window.location.href = mailtoLink;
   }
 
-
   return (
     <div className="contact-container" id="contact">
       <div className="contact-header">
-        <h2>Contact.</h2>
+        <h2>contact.</h2>
       </div>
       <div className="contact-content">
         <div className="contact-blurb">
-          <p>I'm always looking to expand my professional network and explore new possibilities in the world of software development!</p>
+          <p>I'm always looking to expand my professional network and explore new possibilities.</p>
         </div>
         <div className="contact-form-container">
           <h3 id="contact-question">Have a question or want to work together?</h3>

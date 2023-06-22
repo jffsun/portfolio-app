@@ -50,7 +50,7 @@
 }
 
 .project-technologies {
-  font-size: 1rem; /* Adjust the technologies font size as needed */
+  font-size: 1em; /* Adjust the technologies font size as needed */
   margin-bottom: 3%; /* Adjust the margin between the technologies and the button */
 }
 
@@ -61,17 +61,4 @@
   border: 2px solid #000; /* Add a solid black border with a thickness of 2px */
   border-radius: 5px; /* Add a border radius for rounded corners */
   cursor: pointer;
-}
-
-@media screen and (min-width: 576px) and (max-width: 767px) {
-
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-
-}
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-
-}
-@media screen and (min-width: 1200px) and (max-width: 1919px) {
-
 }

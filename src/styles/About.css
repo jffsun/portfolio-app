@@ -5,6 +5,7 @@
   max-width: 1200px;
   width: 80vw;
   margin: 5vw;
+  border-radius: 10px;  
 }
 
 .about-header h2 {
@@ -18,6 +19,7 @@
   background-color: #e9e9e9;
   width: 80vw;
   padding: 3%;
+  border-radius: 10px;  
 }
 
 .about-text {
@@ -25,7 +27,7 @@
   margin: 0;
   font-size: 1.5rem;
 }
-.about-text h3,p {
+.about-text h3,p,li {
   font-size: 1em;
 }
 
@@ -33,22 +35,28 @@
   margin-bottom: 4vh;
 }
 
+.about-blurb ul li::before {
+  content: "•";
+  color: #54B4D3;
+  font-weight: bold;
+  display: inline-block;
+  width: 15px;
+}
+
 @media screen and (min-width: 576px) and (max-width: 767px) {
   .about-header h2 {
-    align-self: center;
     font-size: 2rem;
+    text-align: center;
   }
-  .about-content {
+  .about-blurb {
     font-size: 1.25rem;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .about-content {
-    font-size: 1.25rem;
-  }
   .about-header h2 {
     font-size: 2rem;
+    text-align: center;
   }
 }
 
@@ -58,6 +66,4 @@
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1919px) {
-
-}
+/* Responsiveness for 576px - 767px, 768px - 991px, 992px - 1199px, and 1200px - 1919px  */

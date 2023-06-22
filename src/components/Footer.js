@@ -35,8 +35,6 @@ const Footer = () => {
   };
 
   return (
-    <div>
-      {/* button always show at bottom of viewport */}
       <footer className="fixed-bottom">
         {/* full-width container spanning entire width of viewport */}
         <div className="container-fluid">
@@ -55,7 +53,6 @@ const Footer = () => {
             </div>
           </div>
       </footer>
-    </div>
   );
 };
 
