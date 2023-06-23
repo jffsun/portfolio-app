@@ -25,7 +25,7 @@ const Project = ({ project, openDialog }) => {
       onMouseLeave={handleMouseLeave}>
       <img 
         className="project-image" 
-        src={require(`../images/${project.image}`)} 
+        src={require(`../assets/images/${project.image}`)} 
         alt={project.title}
       />
 

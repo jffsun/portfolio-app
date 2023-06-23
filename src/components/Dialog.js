@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../styles/Dialog.css'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,7 +19,7 @@ const Dialog = ({ id, screenshot, title, description, github, url, isOpen, onClo
         </div>
         <img 
             className="dialog-screenshot" 
-            src={require(`../images/${screenshot}`)} 
+            src={require(`../assets/images/${screenshot}`)} 
             alt={`${title}-screenshot`}
         />
         <div className="dialog-title">
