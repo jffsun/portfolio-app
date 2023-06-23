@@ -6,7 +6,7 @@ const About = () => {
 
     <div className="about-container" id="about">
       <div className="about-header">
-        <h2>about.</h2>
+        <h2>about</h2>
       </div>
       <div className="about-content">
         <div className="about-text">
@@ -35,7 +35,7 @@ const About = () => {
           </div>
           <div className="about-blurb">
             <h3>Other</h3>
-            <p>I love working out, listening to science podcasts, and trying new foods!</p>
+            <p>In my free time, you can find me working out, walking my dog Raven while listening to a book/podcast, or trying new restaurants!</p>
           </div>
         </div>
       </div>

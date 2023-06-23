@@ -36,7 +36,11 @@
   /* border-bottom: 1px solid #333; */
   padding-bottom: 1%;
   text-align: left;
-  padding-left: 5%
+  padding-left: 5%;
+}
+
+.dialog-title h2 {
+  color: #164a41;
 }
 
 .dialog-description {

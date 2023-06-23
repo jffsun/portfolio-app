@@ -109,7 +109,6 @@ p {
 }
 
 a {
-  color: #333;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -124,22 +123,19 @@ a:hover {
 
 /* page background */
 .portfolio-container,.home-container {
-  background-color: #3b6064;
+  background-color: #164a41;
 }
 
-/* page text */
-body {
-  color: #c9e4ca;
+/* header text */
+.navbar, h1, h2 {
+  color: #F2F2F2;
 }
-
-/* about and contact section backgrounds */
+/* section background */
 .about-content, .contact-content, .project-container {
-  background-color: #55828b;
-  /* color: #87bba2; */
+  background-color: #9DCAAD;
 }
 
-/* work section background */
-.project-container {
-  /* background-color: #c9e4ca; */
-  /* background-color: #87bba2; */
+/* paragraph text */
+li, p, h3, .project-overlay h2 {
+  color: #164a41;
 }

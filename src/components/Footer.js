@@ -37,9 +37,6 @@ const Footer = () => {
   return (
       <footer className="fixed-bottom">
         {/* full-width container spanning entire width of viewport */}
-        <div className="container-fluid">
-            <div className="row">
-              <div className="col text-center">
                 {/* if showButton true, show scroll-to-top button */}
                 {showButton && (
                   <button 
@@ -49,9 +46,6 @@ const Footer = () => {
                     <FontAwesomeIcon icon={faArrowCircleUp} size="2x" />
                   </button>
                 )}
-              </div>
-            </div>
-          </div>
       </footer>
   );
 };
