@@ -38,14 +38,16 @@ const Dialog = ({ id, screenshots, title, description, github, onClose }) => {
             <FontAwesomeIcon icon={faX}/>
           </button>
         </div>
-        <img 
-            className="dialog-screenshot" 
-            src={require(`../assets/images/${image}`)} 
-            alt={alt}
-        />
-        <div className="dialog-buttons-arrows">
-            <button onClick={previousScreenshot}>&lt;</button>
-            <button onClick={nextScreenshot}>&gt;</button>
+        <div className="dialog-screenshot-container">
+          <img 
+              className="dialog-screenshot" 
+              src={require(`../assets/images/${image}`)} 
+              alt={alt}
+          />
+          <div className="dialog-buttons-container">
+              <button className="dialog-buttons-arrow" id="previous-screenshot" onClick={previousScreenshot}>&lt;</button>
+              <button className="dialog-buttons-arrow" id="next-screenshot" onClick={nextScreenshot}>&gt;</button>
+          </div>
         </div>
         <div className="dialog-title">
           <h2>{title}</h2>
@@ -53,19 +55,15 @@ const Dialog = ({ id, screenshots, title, description, github, onClose }) => {
         <div className="dialog-description"> 
           <p>{description}</p>
         </div>
-        <div className="dialog-buttons-container">
-          <div className="dialog-buttons-links">
-            <button id="project-github-button">
-              <a 
-                href={github}
-                rel="noreferrer"
-                target="_blank">
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </button>
-          </div>
-        </div>
-        </div>
+          <button id="project-github-button">
+            <a 
+              href={github}
+              rel="noreferrer"
+              target="_blank">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </button>
+      </div>
     </div>
   );
 };
