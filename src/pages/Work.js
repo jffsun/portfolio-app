@@ -11,9 +11,21 @@ const projects = [
     description: 'Parent-teacher portal allows parents to upload student information for teachers. Teachers can post important school announcements and updates for parents.',
     technologies: 'Express.js / Node.js / MySQL',
     image: 'teachers-pet.png',
-    screenshot: 'teachers-pet-screenshot.png' ,
+    screenshots: [
+      {
+        image:'teachers-pet-screenshot-one.png',
+        alt: 'teachers-pet-screenshot-1'
+      },
+      {
+        image:'teachers-pet-screenshot-two.png',
+        alt: 'teachers-pet-screenshot-2'
+      },
+      {
+        image:'teachers-pet-screenshot-three.png',
+        alt: 'teachers-pet-screenshot-3'
+      }
+    ],
     github: 'https://github.com/jffsun/teachers-pet',
-    url: 'https://www.placeholder.com'
   },
   {
     id: 2,
@@ -21,9 +33,21 @@ const projects = [
     description: 'Web application allows users to book pet services and interfaces with a calendar API to render customers\' booked services.',
     technologies: 'React / Apollo Server / GraphQL / MongoDB',
     image: 'doggy-daycare.png',
-    screenshot: 'doggy-daycare-screenshot.png' ,
-    github: 'https://github.com/jffsun/doggy-daycare',
-    url: 'https://www.placeholder.com'
+    screenshots: [
+      {
+        image:'teachers-pet-screenshot-one.png',
+        alt: 'teachers-pet-screenshot-1'
+      },
+      {
+        image:'teachers-pet-screenshot-two.png',
+        alt: 'teachers-pet-screenshot-2'
+      },
+      {
+        image:'teachers-pet-screenshot-three.png',
+        alt: 'teachers-pet-screenshot-3'
+      }
+    ],
+    github: 'https://github.com/jffsun/teachers-pet',
   },
   {
     id: 3,
@@ -31,9 +55,21 @@ const projects = [
     description: 'Gym book web application allows users to build workouts with various exercises. Users can then log exercise data such as weight, number of sets, and number of reps to track their training progress.',
     technologies: 'React / MySQL',
     image: 'train-track.png',
-    screenshot: 'train-track.png' ,
+    screenshots: [
+      {
+        image:'teachers-pet-screenshot-one.png',
+        alt: 'teachers-pet-screenshot-1'
+      },
+      {
+        image:'teachers-pet-screenshot-two.png',
+        alt: 'teachers-pet-screenshot-2'
+      },
+      {
+        image:'teachers-pet-screenshot-three.png',
+        alt: 'teachers-pet-screenshot-3'
+      }
+    ],    
     github: 'https://github.com/jffsun/train-track',
-    url: 'https://www.placeholder.com'
   },
 ];
 
@@ -76,7 +112,7 @@ const Work = () => {
           // if selectedProject truthy with an id, find project's properties array based on id
           id={`dialog-${selectedProject}`}
           title={projects.find((project) => project.id === selectedProject).title}
-          screenshot={projects.find((project) => project.id === selectedProject).screenshot}
+          screenshots={projects.find((project) => project.id === selectedProject).screenshots}
           description={projects.find((project) => project.id === selectedProject).description}
           github={projects.find((project) => project.id === selectedProject).github}
           url={projects.find((project) => project.id === selectedProject).url}

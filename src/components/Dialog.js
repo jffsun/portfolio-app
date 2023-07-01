@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Dialog.css'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-const Dialog = ({ id, screenshot, title, description, github, url, isOpen, onClose }) => {
-  
+const Dialog = ({ id, screenshots, title, description, github, onClose }) => {
+
+  // index value that tracks which project screenshot user is seeing
+  const [currentScreenshot, setCurrentScreenshot] = useState(0);
+  const totalScreenshots = screenshots.length;
+
+  // function to handle cycling to the next screenshot
+  const nextScreenshot = () => {
+    setCurrentScreenshot((currentIndex) => (currentIndex + 1) % totalScreenshots);
+  };
+
+  // function to handle cycling to the previous screenshot
+  const previousScreenshot = () => {
+    setCurrentScreenshot((currentIndex) =>
+    
+      // if on first screenshot then update currentScreenshot to last screenshot in array
+      currentIndex === 0 ? totalScreenshots - 1 : currentIndex - 1
+    );
+  }
+
+  // destructure properties of current screenshot 
+  const { image, alt } = screenshots[currentScreenshot];
+
   return (
     <div className="dialog-overlay">
       <div className="dialog-content" id={id}>
@@ -19,9 +40,13 @@ const Dialog = ({ id, screenshot, title, description, github, url, isOpen, onClo
         </div>
         <img 
             className="dialog-screenshot" 
-            src={require(`../assets/images/${screenshot}`)} 
-            alt={`${title}-screenshot`}
+            src={require(`../assets/images/${image}`)} 
+            alt={alt}
         />
+        <div className="dialog-buttons-arrows">
+            <button onClick={previousScreenshot}>&lt;</button>
+            <button onClick={nextScreenshot}>&gt;</button>
+        </div>
         <div className="dialog-title">
           <h2>{title}</h2>
         </div>
@@ -30,14 +55,6 @@ const Dialog = ({ id, screenshot, title, description, github, url, isOpen, onClo
         </div>
         <div className="dialog-buttons-container">
           <div className="dialog-buttons-links">
-            <button id="project-site-button">
-              <a 
-                href={url}
-                rel="noreferrer"
-                target="_blank">
-                View Site
-              </a>
-            </button>
             <button id="project-github-button">
               <a 
                 href={github}

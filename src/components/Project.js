@@ -28,7 +28,6 @@ const Project = ({ project, openDialog }) => {
         src={require(`../assets/images/${project.image}`)} 
         alt={project.title}
       />
-
       {/* conditionally render overlay depending on isHovered state */}
       {isHovered && (
         <div className="project-overlay">
